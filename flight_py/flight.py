@@ -21,8 +21,8 @@ def generate_table(n: int, m: int) -> pa.Table:
     return pa.table(columns, names=[name for name, _ in fields])
     
 if __name__ == "__main__":
-    n_columns = int(os.environ.get("NUM_COLUMNS", 20))
-    n_rows = int(os.environ.get("NUM_ROWS", 500000))
+    n_columns = int(os.environ.get("NUM_COLUMNS", 30))
+    n_rows = int(os.environ.get("NUM_ROWS", 700000))
     
     server = SimpleFlightService(table=generate_table(n_columns, n_rows))
     print("Starting Flight server on localhost:8815")

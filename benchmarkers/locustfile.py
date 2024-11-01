@@ -1,4 +1,3 @@
-import random 
 import time
 
 import pyarrow.flight as fl
@@ -27,7 +26,7 @@ class FlightUser(User):
         self.client.do_get(ticket).read_all()
         
         resp_time = time.perf_counter() - start_time
-        
+             
         events.request.fire(
             request_type = "Locust Test",
             name = "Locust Test",

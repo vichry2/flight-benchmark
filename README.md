@@ -10,6 +10,11 @@
     - `MAX_ROWS` --> maximum number of rows in a single record batch (chunking) (applicable for Rust server)
 > **Note**: I've observed that the higher the data size sent to the client (high `NUM_ROWS` and `NUM_COLUMNS` values), the higher the difference between Python and Rust server response times.
 
-3. Run `flight_py/flight.py` script in one session, and Rust release binary in another.
+3. Run `flight_py/flight.py` script in one terminal session:
+    - **command**: `python flight.py` from `flight_py` folder.
 
-4. Run `benchmarkers/client.py` to view comparative results.
+4. Run `flight_rs` Rust project binary:
+    - **command**: `./target/release/flight_rs` from `flight_rs` directory .
+
+5. Run `benchmarkers/client.py` to view comparative results:
+    - **command**: `python client.py` from `benchmarkers` folder.
